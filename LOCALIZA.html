@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPC TI LOCALIZA | Infraestrutura de TI</title>
+  <style>
+    :root {
+      --navy: #0e1b3d;
+      --navy-2: #142351;
+      --bg: #eef1f6;
+      --card: #ffffff;
+      --border: #e3e7ef;
+      --text: #1b2333;
+      --muted: #7b8497;
+      --blue: #2e6bf2;
+      --blue-soft: #e8effe;
+      --green: #12b76a;
+      --green-soft: #e6f9ef;
+      --amber: #f79009;
+      --amber-soft: #fff6e5;
+      --red: #f04438;
+      --red-soft: #fdeceb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: #cfd6ea;
+      display: flex;
+      flex-direction: column;
+      padding: 22px 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 6px 26px 6px;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #e9ecf7;
+    }
+
+    .brand-toggle {
+      margin-left: auto;
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cfd6ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    nav.nav-primary {
+      margin-top: 8px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 12px;
+      border-radius: 9px;
+      color: #aeb7d1;
+      font-size: 14px;
+      cursor: default;
+      margin-bottom: 2px;
+    }
+
+    .nav-item .ic {
+      width: 18px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .nav-group-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 12px;
+      color: #c4cbe4;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-group-label .chev {
+      margin-left: auto;
+      font-size: 11px;
+      opacity: .7;
+    }
+
+    .nav-sub {
+      padding-left: 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 2px;
+    }
+
+    .nav-sub-item {
+      padding: 9px 10px;
+      font-size: 13.5px;
+      border-radius: 8px;
+      color: #8f9ac2;
+      position: relative;
+    }
+
+    .nav-sub-item.active {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 600;
+    }
+
+    .nav-sub-item.active::before {
+      content: "";
+      position: absolute;
+      left: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5b8bff;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 16px 10px 4px;
+      font-size: 11px;
+      color: #6b7594;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* ---------- MAIN ---------- */
+    .main {
+      flex: 1;
+      min-width: 0;
+      padding: 28px 34px 50px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 26px;
+      gap: 20px;
+    }
+
+    .topbar h1 {
+      margin: 0 0 4px;
+      font-size: 26px;
+      font-weight: 800;
+      color: #111a30;
+    }
+
+    .topbar p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .topbar-actions {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 9px;
+      font-size: 13.5px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: #2a3550;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    /* stat cards */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 2px rgba(20, 30, 60, 0.03);
+    }
+
+    .stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+
+    .stat-icon.blue {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .stat-icon.green {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .stat-icon.amber {
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .stat-icon.red {
+      background: var(--red-soft);
+      color: var(--red);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111a30;
+    }
+
+    /* alerts panel */
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 2px rgba(20, 30, 60, 0.03);
+    }
+
+    .panel-head h2 {
+      margin: 0 0 2px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #111a30;
+    }
+
+    .panel-head p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .alerts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      margin-top: 18px;
+    }
+
+    .alert-col-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #3a4560;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .alert-empty {
+      font-size: 13px;
+      color: #b7bdcb;
+    }
+
+    .alert-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--red-soft);
+      border: 1px solid #fbd6d2;
+      color: #b3261e;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 12px;
+      border-radius: 9px;
+    }
+
+    /* table */
+    .table-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .table-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 9px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      min-width: 250px;
+    }
+
+    .search-box svg {
+      flex-shrink: 0;
+      opacity: .6;
+    }
+
+    .badge-count {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 11.5px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #293049;
+    }
+
+    tbody tr:hover {
+      background: #f7f9fc;
+    }
+
+    .cell-host {
+      font-weight: 700;
+      color: #152047;
+    }
+
+    .cell-muted {
+      color: #b6bcc9;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .status-pill.estoque {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .status-pill.uso {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .status-pill.manutencao {
+      background: var(--amber-soft);
+      color: #b5680a;
+    }
+
+    .link-edit {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      padding: 22px 0 4px;
+    }
+
+    .page-num {
+      font-size: 14px;
+      color: #b6bcc9;
+      font-weight: 600;
+      cursor: pointer;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      user-select: none;
+    }
+
+    .page-num:hover {
+      color: #2a3550;
+    }
+
+    .page-num.active {
+      color: #1b2333;
+      border-bottom-color: #1b2333;
+    }
+
+    .page-arrow {
+      color: #b6bcc9;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    .page-arrow.disabled {
+      color: #e3e7ef;
+      cursor: default;
+    }
+
+    .page-arrow:hover:not(.disabled) {
+      color: #2a3550;
+    }
+
+    @media (max-width: 1100px) {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .alerts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 780px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .main {
+        padding: 20px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div>
+        <h1>DPC TI LOCALIZA</h1>
+        <p>Usuários ativos na DPC...</p>
+      </div>
+    </div>
+
+    <section class="panel">
+      <div class="table-toolbar">
+        <div>
+          <h2 style="margin:0 0 2px;font-size:16px;font-weight:800;color:#111a30;">DPC TI LOCALIZA</h2>
+          <p style="margin:0;font-size:13px;color:var(--muted);">Lista geral usuários ativos</p>
+        </div>
+        <div class="table-toolbar-right">
+          <span class="badge-count" id="result-count"></span>
+          <div class="search-box">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input id="search-input" type="text" placeholder="Busca por usuário, gerente ou setor..."
+              style="border:none;outline:none;background:transparent;font-size:13px;color:#1b2333;width:100%;font-family:inherit;">
+          </div>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Gerente</th>
+              <th>Andar</th>
+              <th>Localização</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- linhas geradas via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination" id="pagination"></div>
+    </section>
+
+  </main>
+
+  <script>
+    const rows = [{"usuario": "ANDRE MUNIZ", "setor": "ADMINISTRAÇÃO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"}, {"usuario": "ELISANGELA LIMA", "setor": "ADMINISTRAÇÃO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"}, {"usuario": "LUCAS RIBEIRO", "setor": "ADMINISTRAÇÃO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"}, {"usuario": "MARIA JOSE", "setor": "ADMINISTRAÇÃO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"}, {"usuario": "SIMONE SANTOS", "setor": "ADMINISTRAÇÃO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"}, {"usuario": "ANA PAULA ARAUJO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "ANDREWS MENDES", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "BEATRIZ DOS SANTOS", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "BIANCA LIMA", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "CRISTIAN PEREIRA", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "ISABELLA CORREA", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "IZADORA HONORATO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "JULIA SABOYA", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "KARINE LAMMEL", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "LETICIA MARINHO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "MARCELA NUNES", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "MARIA VIANA", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "MATHEUS PAULO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "NATHALIA CARVALHO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "PAMELA NASCIMENTO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "SARA SILVA", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "SHAIENE SOTELO", "setor": "CONTABILIDADE 1-A", "gerente": "Izadora Honorato", "andar": "Novo 5", "localizacao": "Esquerda / Esquerda da sala de reunião"}, {"usuario": "CAMILLE VITORIA", "setor": "CONTABILIDADE 1-B", "gerente": "Luciana Arrigoni", "andar": "Novo 5", "localizacao": "Frente / Esquerda"}, {"usuario": "FLAVIA PONTES", "setor": "CONTABILIDADE 1-B", "gerente": "Luciana Arrigoni", "andar": "Novo 5", "localizacao": "Frente / Esquerda"}, {"usuario": "GIOVANA BALESTRERO", "setor": "CONTABILIDADE 1-B", "gerente": "Luciana Arrigoni", "andar": "Novo 5", "localizacao": "Frente / Esquerda"}, {"usuario": "GISELY PORTUGAL", "setor": "CONTABILIDADE 1-B", "gerente": "Luciana Arrigoni", "andar": "Novo 5", "localizacao": "Frente / Esquerda"}, {"usuario": "MAIRA FONSECA", "setor": "CONTABILIDADE 1-B", "gerente": "Luciana Arrigoni", "andar": "Novo 5", "localizacao": "Frente / Esquerda"}, {"usuario": "MIGUEL MARQUES", "setor": "CONTABILIDADE 1-B", "gerente": "Luciana Arrigoni", "andar": "Novo 5", "localizacao": "Frente / Esquerda"}, {"usuario": "NATALIA REIS", "setor": "CONTABILIDADE 1-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAMILA GERALDO", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "FELIPE LIMA", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "JOSE RENATO", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "LUIZ AMARAL", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "RAFAELA DIAS", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "ROQUE THOMAS", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "TERESA DIAS", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "VINICIUS CHAVES", "setor": "CONTABILIDADE 2-A", "gerente": "Renata Goldoni", "andar": "Velho 5", "localizacao": "Direita / Direita da escada / 1º baia"}, {"usuario": "BRUNA GABRIELA", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "DANIEL DAMASO", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "ERYKA SOARES", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "PATRICIA MEUREN", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "RICARDO PEREIRA", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "STHEFANY ABREU", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "THIAGO MORENO", "setor": "CONTABILIDADE 2-B", "gerente": "Ricardo Pereira", "andar": "Velho 5", "localizacao": "Meio /"}, {"usuario": "ARIANA PINHO", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "BARBARA MACHARETE", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "CARLOS SANTOS", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "GABRIEL CENA", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "MARIA GOMES", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "RAYANNE CORREA", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "THIAGO GLASER", "setor": "CONTABILIDADE 2-C", "gerente": "Felipe Lyra", "andar": "Velho 5", "localizacao": "Final do corredor à esquerda"}, {"usuario": "ANE SOUZA", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "BIANCA SANTOS", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "IGOR DOLL", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JEFFERSON FERRAZ", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JOSE JACOB", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MICHAELI CAVALCANTE", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MICHEL BARBOSA", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "THALYNE VIEIRA", "setor": "CONTABILIDADE 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "BEATRIZ GONÇALVES", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAMILA MELO", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "DAYARA FARIAS", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "FERNANDA SANTOS", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "GIULIANA MONTEIRO", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "HELEN BOMFIM", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "HELENA DUARTE", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "THIAGO FERRON", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "VANESSA DIAS", "setor": "CONTABILIDADE 22-B", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "BRENO GONCALVES", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JESSIKA POLATO", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JHENIFFER SILVEIRA", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "LUIZ DELFORNO", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "PEDRO AUGUSTO", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "TAMIRES FERREIRA", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "TAMIRES LIMA", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "VIVIANE RIBEIRO", "setor": "CONTABILIDADE 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAMILA ALVES", "setor": "CONTABILIDADE 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CIBELLE PINHEIRO", "setor": "CONTABILIDADE 22-E", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JULIO VALENTIM", "setor": "CONTABILIDADE 22-E", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MARCELO SILVA", "setor": "CONTABILIDADE 22-E", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "YASMIM SOARES", "setor": "CONTABILIDADE 22-E", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "AGATHA GOMES", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "ANGELICA FERNANDES", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "GABRIELLA ALVARENGA", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "MARIA DRUMMOND", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "MARLON RAMOS", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "MATHEUS NASCIMENTO", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "RENATO SANTOS", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "RICARDO MEDEIROS", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "TAMARA MEDEIROS", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "VINICIUS PINHEIRO", "setor": "CONTABILIDADE 3-C", "gerente": "Rejane Xavier", "andar": "Novo 5", "localizacao": "Frente"}, {"usuario": "BRUNO PADUA", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "GIUSEPPE GIGLIO", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "KAYQUE DIONISIO", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "LUCAS TARANTO", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "SUZANA MEDINA", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "VERONICA COSTA", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "VICTOR CARRETE", "setor": "CONTABILIDADE 3-D", "gerente": "Veronica Costa", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Início"}, {"usuario": "ALEX BARBOSA", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "ANA PAULA NAZARETH", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "DIEGO FARIA", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "JESSICA MONTEIRO", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "JOAO NERES", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "MAURICIO MORAIS", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "NAYARA MARTINS", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "PAOLLA BABO", "setor": "CONTABILIDADE 3-E", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "ALINE BONOTO", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "ANDRE CANDIDO", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "FABRICIO LYRA", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "GISELE MARVILA", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "LAIS BRUM", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "LUCAS OLIVEIRA", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "LUIS FERREIRA", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "PIETRA VICENSE", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "RENAN PINHEIRO", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "RENATA PERES", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "RENATO BEZERRA", "setor": "CONTABILIDADE 8-A", "gerente": "Alessandro Barreto", "andar": "4", "localizacao": "Direita / 3º baia / Janela"}, {"usuario": "ARTHUR MANHAES", "setor": "CONTABILIDADE 8-B", "gerente": "Ana Miceli", "andar": "4", "localizacao": "Esquerda / Final do corredor / Esquerda"}, {"usuario": "CAIO YAN", "setor": "CONTABILIDADE 8-B", "gerente": "Ana Miceli", "andar": "4", "localizacao": "Esquerda / Final do corredor / Esquerda"}, {"usuario": "CARLOS BARBOSA", "setor": "CONTABILIDADE 8-B", "gerente": "Ana Miceli", "andar": "4", "localizacao": "Esquerda / Final do corredor / Esquerda"}, {"usuario": "DOUGLAS AZEVEDO", "setor": "CONTABILIDADE 8-B", "gerente": "Ana Miceli", "andar": "4", "localizacao": "Esquerda / Final do corredor / Esquerda"}, {"usuario": "GUSTAVO MATOS", "setor": "CONTABILIDADE 8-B", "gerente": "Ana Miceli", "andar": "4", "localizacao": "Esquerda / Final do corredor / Esquerda"}, {"usuario": "PALOMA MELLO", "setor": "CONTABILIDADE 8-B", "gerente": "Ana Miceli", "andar": "4", "localizacao": "Esquerda / Final do corredor / Esquerda"}, {"usuario": "ALEF BEZERRA", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "LEANDRO BARBOSA", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "LORHANNA HEIZER", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "LUIDY BOTELHO", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "LUIZ CASTRO", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "RAQUEL LOREDANA", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "THAISE ANDRADE", "setor": "CONTABILIDADE 8-C", "gerente": "Raquel Loredana", "andar": "4", "localizacao": "Direita / 3 ºbaia a esquerda"}, {"usuario": "ANA CANAFISTULA", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "CAROLINA LORETO", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "DANIELE BERTHOLIN", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "DENISE ALVES", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "FABIOLA MIRANDA", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "GABRIELLA RITO", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "ISABELA GAMA", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "LEONARDO COSTA", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "LETICIA LISBOA", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "MARIANA BRUNACIO", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "RAYANNE BRASIL", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "ROSANA VIANNA", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "STEPHANIE GONCALVES", "setor": "DEPARTAMENTO PESSOAL 5-B", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "ALINE NASCIMENTO", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "AMANDA ARAUJO", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "AMANDA BERNARDO", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "ANA ASSUMPCAO", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "BEATRIZ FONSECA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "BRENDA ARAUJO", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "GABRIELLA NICASTRO", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "GIOVANNI OLIVEIRA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "IVIE LEMOS", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "LAIS BOGEA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "LARISSA TERRA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "LEONARDO SILVA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "LUCIANA VIEIRA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "MANOELA LIMA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "MARIANA ALVARENGA", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "NAYARA PASSOS", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "THAYNARA MARQUES", "setor": "DEPARTAMENTO PESSOAL 5-C", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "AMANDA MARINHO", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "ANA CARVALHO", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "ANA XAVIER", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "CARMEN ARAUJO", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "CAROLLINE COELHO", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "LARISSA ZURMELE", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "LIVIA NETTO", "setor": "DEPARTAMENTO PESSOAL 5-D", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "AMANDA SANTOS", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "ANA ELISE", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "CLARA ANNES", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "PAMELA MEDEIROS", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "QUEZIA MARTINS", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "ROMARIO FERREIRA", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "THAMIRIS ESTEVES", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "VICTORIA LIMA", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "YAGO DA SILVA", "setor": "DEPARTAMENTO PESSOAL 5-E", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "BEATRIZ LOUREIRO", "setor": "DEPARTAMENTO PESSOAL 5-F", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "CAMILA GOMES", "setor": "DEPARTAMENTO PESSOAL 5-F", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "GABRIELLE ROZARIO", "setor": "DEPARTAMENTO PESSOAL 5-F", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "VIRGINIA ZANI", "setor": "DEPARTAMENTO PESSOAL 5-F", "gerente": "Luciana Lupinucci", "andar": "10", "localizacao": "Direita"}, {"usuario": "CARLA CRISTHINA", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "ELISANGELA BERNARDO", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "KAMILLA RODRIGUES", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "LAYZA FREITAS", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "REYNAN LIMA", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "SAMARA LINO", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "WESLLEY MARTINS", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "YTALLA SALES", "setor": "DEPARTAMENTO PESSOAL 5-J", "gerente": "Pamela Medeiros", "andar": "10", "localizacao": "Direita"}, {"usuario": "BRUNA DUARTE", "setor": "DEPARTAMENTO PESSOAL INTERNO", "gerente": "Marilia Cavalcante", "andar": "10", "localizacao": "Direita"}, {"usuario": "MAYARA MELIGA", "setor": "DEPARTAMENTO PESSOAL INTERNO", "gerente": "Marilia Cavalcante", "andar": "10", "localizacao": "Direita"}, {"usuario": "SARA MACEDO", "setor": "DEPARTAMENTO PESSOAL INTERNO", "gerente": "Marilia Cavalcante", "andar": "10", "localizacao": "Direita"}, {"usuario": "SUZANE MARTINS", "setor": "DEPARTAMENTO PESSOAL INTERNO", "gerente": "Marilia Cavalcante", "andar": "10", "localizacao": "Direita"}, {"usuario": "ANTHONY VICTOR", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "CAMILLY AZEVEDO", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "HENRIQUE ALVES", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "JOAO BENTO", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "JULIA PERES", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "KARLLA LEMOS", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "MATHEUS VINICIUS", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "PAMELA MENDONCA", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "RAQUEL NEPOMUCENO", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "RYLLORY SANTANA", "setor": "DPC PRIVATE", "gerente": "Rosana Villardi", "andar": "10", "localizacao": "Direita / Ao lado da sala de Reunião Diamante"}, {"usuario": "BRENO MAGALHAES", "setor": "FINANCEIRO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Frente ao balcão ADM"}, {"usuario": "CAMILA SOBRAL", "setor": "FINANCEIRO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Frente ao balcão ADM"}, {"usuario": "CARLOS CUNHA", "setor": "FINANCEIRO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Frente ao balcão ADM"}, {"usuario": "NATACIANE PRUDENCIO", "setor": "FINANCEIRO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Frente ao balcão ADM"}, {"usuario": "RACHEL LOPES", "setor": "FINANCEIRO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Frente ao balcão ADM"}, {"usuario": "VINICIUS ROCHA", "setor": "FINANCEIRO", "gerente": "Joice Albertini", "andar": "10", "localizacao": "Esquerda / Frente ao balcão ADM"}, {"usuario": "AGATHA BORGES", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "DEBORA CAETANO", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "EDILSON BORGES", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "FLAVIANE FELIPE", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "PATRICIA HENRIQUE", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "PHILIP MARTINS", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "RAQUEL FAGUNDES", "setor": "GESTAO FINANCEIRA 4-D", "gerente": "Adriana Costa / Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "CAMILA GASPARELLO", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "FERNANDA MAIA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "GABRIEL MOREIRA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "GABRIELA VILELA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "GIOVANNA SILVA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "GLAUCE ANTUNES", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "IGOR MOREIRA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "JEFFERSON GONCALVES", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "JOAO SARMENTO", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "KETELLYN BARBOSA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "LEONARDO MENDES", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "LETICIA PORTUGAL", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "NATHALIA SCHMITT", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "NICOLAS BALBINO", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "VICTOR SIQUEIRA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "VICTOR TRAJANO", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "VIVIAN COSTA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "YAN SANTANA", "setor": "GESTAO FINANCEIRA 9-A", "gerente": "Jefferson Gonçalves", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "ANDRE ALMEIDA", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "GRAZIELLE ARAUJO", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "LEANDRO FORTUNATO", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "LEONARDO CARVALHO", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "LETICIA RODRIGUES", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "MARCELO SANTOS", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "MATHEUS PESSANHA", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "MAYARA MATTOS", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "RAFAEL FERREIRA", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "TAYANE SANTOS", "setor": "GESTAO FINANCEIRA 9-B", "gerente": "Luiz Caldas", "andar": "4", "localizacao": "Esquerda / Final do corredor / Direita"}, {"usuario": "ALINE CRISTINA", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "ANA BARROS", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "BRUNA PATRICIA", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAIO CAMPOS", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CESAR MARQUES", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "INGRID ASSIS", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JULIANA GALDINO", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "RAISSA INACIO", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "VINICIUS NASCIMENTO", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "VITOR MARINGOLO", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "WAGNER MARTINS", "setor": "GESTÃO FINANCEIRA 9-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "ANA BEATRIZ", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "FELIPE BRASIL", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "LEONNY ROSALIA", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "MARIANA COIMBRA", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "MATHEUS MONTEIRO", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "RAFAELA BARBOSA", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "RAPHAELA COSTA", "setor": "IMPOSTOS 1-A", "gerente": "Amanda Barbosa", "andar": "Novo 5", "localizacao": "Esquerda / Direita da sala de reunião"}, {"usuario": "BEATRIZ BARBOSA", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "DAIANA BARBOZA", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "DEBORA MORAES", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "DEISE CRISTINA", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "GIOVANNA FURLANI", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "KARINA NEVES", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "LILIAN CALDAS", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "LUCAS TEIXEIRA", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "PATRICIA JACINTO", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "RAMON COSTA", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "STHEFANY FARIAS", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "THAYNAN SOUZA", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "VANESSA QUEIROZ", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "VINICIUS SOARES", "setor": "IMPOSTOS 2-A", "gerente": "Patricia Guimarães", "andar": "Velho 5", "localizacao": "Frente a escada"}, {"usuario": "ALDENIRA SOUZA", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "CAMILA ALMEIDA", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "CINTIA PEREIRA", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "ISAIAS DIONIZIO", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "JOAO BASILIO", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "JULIANA SOUZA", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "KAUA DINIZ", "setor": "IMPOSTOS 2-B", "gerente": "Luciana Valu", "andar": "Velho 5", "localizacao": "Direita / Final do corredor à Direita"}, {"usuario": "DENISE CRUZ", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "HERALDO JUNIOR", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "JHONY BENDOR", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "LUIZ GONCALVES", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "RAFAELLE ANITA", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "SUELLEN AMARAL", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "VANESSA CASTRO", "setor": "IMPOSTOS 2-C", "gerente": "Natalia Martire", "andar": "Velho 5", "localizacao": "Direita / Em frente a sala da Glória"}, {"usuario": "ABDORAL BRAGA", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "AMANDA CARVALHO", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "DOUGLAS CARVALHO", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "FABIO MACEDO", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "GUILHERME FREIRE", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "GUILHERME KEVIN", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JESSICA RODRIGUES", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "LARISSA BATISTA", "setor": "IMPOSTOS 22-A", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "LIEGI ALVES", "setor": "IMPOSTOS 22-C", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "ALEX QUERINO", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "AMANDA LIMA", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "DANIELY SILVA", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "GABRIEL RIBEIRO", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MENIKEN SANTOS", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MILLENE VICTORIA", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "PALOMA SANTOS", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "PRISCILA BARBARA", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "VITOR AQUINO", "setor": "IMPOSTOS 22-D", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "ANDRESSA MATOS", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAIQUE ROBERTO", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "FRANCIELE NUNES", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "KARINE ALENCAR", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "LAURA FILGUEIRA", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MIDIA AUGUSTO", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "NICOLE FERREIRA", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "RAFAELA CRUZ", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "SARAH FEITOSA", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "WANESSA VIEIRA", "setor": "IMPOSTOS 22-F", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "DANUZA SOUZA", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "ERIK FERNANDES", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "GUILHERME OLIVIO", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "JAQUELINE VIANA", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "MARIANA SILVA", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "NATHALIA MACHADO", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "SARITA RAFAEL", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "SIMONE CONTENTE", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "UILYTTA ROCHA", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "VIVIAN CASARINI", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "WESLEY PEDROSO", "setor": "IMPOSTOS 22-G", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAROLINE AMARAL", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "CINTIA MONTEIRO", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "DANIEL COSTA", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "JESSICA LAURA", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "JOAO VITOR COSTA", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "KAROLINE GONCALVES", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "MARCOS PAULO", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "MARINA MELLO", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "NIKOLAS ACHATZ", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "PAULO TANNURI", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "RYAN GOMES", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "VITOR VIEIRA", "setor": "IMPOSTOS 3-A", "gerente": "Cristina Gouvea", "andar": "Novo 5", "localizacao": "Direita / Sala à direita / Meio"}, {"usuario": "ANGELO ALEIXO", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "BRUNA MELO", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "BRUNA OLIVEIRA", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "ESTER MARQUES", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "GABRIEL RONZANI", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "GUSTAVO MORATELLI", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "IVE DE FREITAS", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "JONAS LEAL", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "LETICIA CARRILHO", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "MIRELLA MARQUES", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "MOZART ANDRADE", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "PRISCILA CLEMENTE", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "RAFAEL ALMEIDA", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "RENATA SANTOS", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "VALESCA RODRIGUES", "setor": "IMPOSTOS 4-B", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "ALESSANDRA RIBEIRO", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "ANTONIO MARTINS", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "BEATRIZ GRACA", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "CAROLAINE BASTOS", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "CAROLINA GAGLIANONI", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "IGOR CORREA", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "IGOR GENUINO", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "JOYCE DANTAS", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "KETLIN SANTOS", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "LUCIMERE SANTOS", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "MARIANE BRUM", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "MAYLA PEREIRA", "setor": "IMPOSTOS 4-D", "gerente": "Cassia Calixto", "andar": "10", "localizacao": "Direita / Final do corredor à Esquerda"}, {"usuario": "BEATRIZ SAMPAIO", "setor": "IMPOSTOS 4-E", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "ANDRE VIDAL", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "DANIELE CANDIDO", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "JACQUELINE PISSARRA", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "JOAO GONCALVES", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "LARISSA BALBINO", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "LARISSA MAGALHAES", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "MICHAEL BATISTA", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "VITORIA PEREIRA", "setor": "IMPOSTOS 8-A", "gerente": "Luciane Santana", "andar": "-", "localizacao": "-"}, {"usuario": "ALUA OLIVEIRA", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "CAIO OLIVEIRA", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "DAVID OLIVEIRA", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "FELIPE GABRIEL", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "GUILHERME CARDOSO", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "GUILHERME SOARES", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "HIAGO CUNHA", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "KELVYN AZEVEDO", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "MARCOS LOFREDO", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "PATRICIA NASCIMENTO", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "RAFAEL SANTOS", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "RONALDO PEREIRA", "setor": "Informática", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "ANA RODRIGUES", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "ANDREZZA BRITO", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "BRUNO PITER", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "CAIO ABRAAO", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "JOSE ROSA", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "MATEUS ASSIS", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "MATHEUS OLIVEIRA", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "RAPHAEL ESCH", "setor": "LABTECH", "gerente": "Willian Mendes", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "ITALO BRAGA", "setor": "MARKETING", "gerente": "Luciana Arakaki", "andar": "4", "localizacao": "Esquerda / Ao lado do CPD"}, {"usuario": "THAMIRIS MUNIZ", "setor": "MARKETING", "gerente": "Luciana Arakaki", "andar": "4", "localizacao": "Esquerda / Ao lado do CPD"}, {"usuario": "FABIANA SANTOS", "setor": "NOVOS NEGÓCIOS", "gerente": "Luciana Arakaki", "andar": "4", "localizacao": "Direita / Antes do CPD"}, {"usuario": "LEILA SA", "setor": "NOVOS NEGÓCIOS", "gerente": "Luciana Arakaki", "andar": "4", "localizacao": "Direita / Antes do CPD"}, {"usuario": "JONATAS FERREIRA", "setor": "OBRIGAÇÕES ACESSÓRIAS", "gerente": "Cristiano Gonçalves", "andar": "4", "localizacao": "Direita / Final do corredor"}, {"usuario": "KAMILA MUNIZ", "setor": "OBRIGAÇÕES ACESSÓRIAS", "gerente": "Cristiano Gonçalves", "andar": "4", "localizacao": "Direita / Final do corredor"}, {"usuario": "PAMELLA TURQUES", "setor": "OBRIGAÇÕES ACESSÓRIAS", "gerente": "Cristiano Gonçalves", "andar": "4", "localizacao": "Direita / Final do corredor"}, {"usuario": "REBECCA FRANCA", "setor": "OBRIGAÇÕES ACESSÓRIAS", "gerente": "Cristiano Gonçalves", "andar": "4", "localizacao": "Direita / Final do corredor"}, {"usuario": "THIAGO ANDRADE", "setor": "OBRIGAÇÕES ACESSÓRIAS", "gerente": "Cristiano Gonçalves", "andar": "4", "localizacao": "Direita / Final do corredor"}, {"usuario": "SAMUEL LIMA", "setor": "PARALEGAL", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "THAIS MARQUES", "setor": "PARALEGAL", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "THIAGO COELHO", "setor": "PARALEGAL", "gerente": "Michele Mofacto", "andar": "10", "localizacao": "Direita / Final do corredor"}, {"usuario": "MANUEL PINHO", "setor": "PRESIDÊNCIA", "gerente": "-", "andar": "-", "localizacao": "-"}, {"usuario": "CAROLINE BULHOES", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "DANIEL MENDES", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "JESSICA DUARTE", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "LETICIA ANDRADE", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "LUCAS FIGUEIREDO", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "RICARDO PAIXAO", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "SARA ARRAES", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "VICTOR HUGO", "setor": "RECURSOS HUMANOS", "gerente": "Marcelo Leite", "andar": "4", "localizacao": "Esquerda / Frente ao bebedouro"}, {"usuario": "KAIO CESAR", "setor": "SISTEMAS CONTÁBEIS / FISCAIS", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "KAYQUY ITAPARICA", "setor": "SISTEMAS CONTÁBEIS / FISCAIS", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "NAIARA BASTOS", "setor": "SISTEMAS CONTÁBEIS / FISCAIS", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "PEDRO MERLO", "setor": "SISTEMAS CONTÁBEIS / FISCAIS", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "WLADIMIR PEREIRA", "setor": "SISTEMAS CONTÁBEIS / FISCAIS", "gerente": "Ronaldo Pereira", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "ALEXANDRE DE HOLANDA", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "ALINE PAIVA", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "ANA MEDEIROS", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "CARLOS ALMEIDA", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "EDUARDO GABINA", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "LUCAS ANTHONY", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "LUIZA CECI", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "NAIARA PERES", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "SAMUEL STANLEY", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}, {"usuario": "WILSON BALTHAZAR", "setor": "SISTEMAS DP / RH", "gerente": "Eduardo Gabina", "andar": "10", "localizacao": "Esquerda / Ao fundo do corredor"}];
+    const ROWS_PER_PAGE = 12;
+
+    const tbody = document.getElementById("table-body");
+    const searchInput = document.getElementById("search-input");
+    const resultCount = document.getElementById("result-count");
+    const paginationEl = document.getElementById("pagination");
+
+    let listaAtual = rows;
+    let paginaAtual = 1;
+
+    function normalizar(s) {
+      return (s || "")
+        .toString()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+    }
+
+    function renderTabela() {
+      const totalPaginas = Math.max(1, Math.ceil(listaAtual.length / ROWS_PER_PAGE));
+      if (paginaAtual > totalPaginas) paginaAtual = totalPaginas;
+
+      const inicio = (paginaAtual - 1) * ROWS_PER_PAGE;
+      const pagina = listaAtual.slice(inicio, inicio + ROWS_PER_PAGE);
+
+      tbody.innerHTML = "";
+      pagina.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td class="cell-host">${r.usuario}</td>
+        <td class="${r.gerente === '-' ? 'cell-muted' : ''}">${r.gerente}</td>
+        <td class="${r.andar === '-' ? 'cell-muted' : ''}">${r.andar}</td>
+        <td class="${r.localizacao === '-' ? 'cell-muted' : ''}">${r.localizacao}</td>
+      `;
+        tbody.appendChild(tr);
+      });
+
+      resultCount.textContent = listaAtual.length + (listaAtual.length === 1 ? " resultado" : " resultados");
+      renderPaginacao(totalPaginas);
+    }
+
+    function irParaPagina(p) {
+      paginaAtual = p;
+      renderTabela();
+    }
+
+    function renderPaginacao(totalPaginas) {
+      paginationEl.innerHTML = "";
+      if (totalPaginas <= 1) return;
+
+      const prev = document.createElement("span");
+      prev.className = "page-arrow" + (paginaAtual === 1 ? " disabled" : "");
+      prev.innerHTML = "&#8249;";
+      prev.onclick = () => { if (paginaAtual > 1) irParaPagina(paginaAtual - 1); };
+      paginationEl.appendChild(prev);
+
+      const janela = 3;
+      let inicio = Math.max(1, paginaAtual - 1);
+      let fim = Math.min(totalPaginas, inicio + janela - 1);
+      inicio = Math.max(1, fim - janela + 1);
+
+      for (let p = inicio; p <= fim; p++) {
+        const span = document.createElement("span");
+        span.className = "page-num" + (p === paginaAtual ? " active" : "");
+        span.textContent = p;
+        span.onclick = () => irParaPagina(p);
+        paginationEl.appendChild(span);
+      }
+
+      const next = document.createElement("span");
+      next.className = "page-arrow" + (paginaAtual === totalPaginas ? " disabled" : "");
+      next.innerHTML = "&#8250;";
+      next.onclick = () => { if (paginaAtual < totalPaginas) irParaPagina(paginaAtual + 1); };
+      paginationEl.appendChild(next);
+    }
+
+    function filtrar() {
+      const termo = normalizar(searchInput.value.trim());
+      listaAtual = !termo ? rows : rows.filter(r =>
+        normalizar(r.usuario).includes(termo) ||
+        normalizar(r.gerente).includes(termo) ||
+        normalizar(r.setor).includes(termo)
+      );
+      paginaAtual = 1;
+      renderTabela();
+    }
+
+    searchInput.addEventListener("input", filtrar);
+
+    renderTabela();
+  </script>
+
+</body>
+
+</html>
