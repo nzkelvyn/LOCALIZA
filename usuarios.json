@@ -1,2594 +1,356 @@
 [
   {
     "id": 1,
-    "setores": "ADMINISTRAÇÃO",
-    "usuarios": "ANDRE MUNIZ",
-    "id_setor": 47
+    "nome": "INFORMATICA TI",
+    "andar": "10",
+    "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 2,
-    "setores": "ADMINISTRAÇÃO",
-    "usuarios": "ELISANGELA LIMA",
-    "id_setor": 47
+    "nome": "DPC PRIVATE",
+    "andar": "10",
+    "localizacao": "Direita / Ao lado da sala de Reunião Diamante"
   },
   {
     "id": 3,
-    "setores": "ADMINISTRAÇÃO",
-    "usuarios": "LUCAS RIBEIRO",
-    "id_setor": 47
+    "nome": "CONTABILIDADE 1-A",
+    "andar": "Novo 5",
+    "localizacao": "Esquerda / Esquerda da sala de reunião"
   },
   {
     "id": 4,
-    "setores": "ADMINISTRAÇÃO",
-    "usuarios": "MARIA JOSE",
-    "id_setor": 47
+    "nome": "CONTABILIDADE 1-B",
+    "andar": "Novo 5",
+    "localizacao": "Frente / Esquerda"
   },
   {
     "id": 5,
-    "setores": "ADMINISTRAÇÃO",
-    "usuarios": "SIMONE SANTOS",
-    "id_setor": 47
+    "nome": "CONTABILIDADE 2-A",
+    "andar": "Velho 5",
+    "localizacao": "Direita / Direita da escada / 1º baia"
   },
   {
     "id": 6,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "ANA PAULA ARAUJO",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 2-B",
+    "andar": "Velho 5",
+    "localizacao": "Meio /"
   },
   {
     "id": 7,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "ANDREWS MENDES",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 2-C",
+    "andar": "Velho 5",
+    "localizacao": "Final do corredor à esquerda"
   },
   {
     "id": 8,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "BEATRIZ DOS SANTOS",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 2-E",
+    "andar": "Novo 5",
+    "localizacao": "Esquerda / Esquerda da sala de reunião"
   },
   {
     "id": 9,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "BIANCA LIMA",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 3-B",
+    "andar": "Novo 5",
+    "localizacao": "Sala de vidro entre Rejane e Verônica Costa"
   },
   {
     "id": 10,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "CRISTIAN PEREIRA",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 3-C",
+    "andar": "Novo 5",
+    "localizacao": "Frente"
   },
   {
     "id": 11,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "ISABELLA CORREA",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 3-D",
+    "andar": "Novo 5",
+    "localizacao": "Direita / Sala à direita / Início"
   },
   {
     "id": 12,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "IZADORA HONORATO",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 3-E",
+    "andar": "Novo 5",
+    "localizacao": "Direita / Sala à direita / Meio"
   },
   {
     "id": 13,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "JULIA SABOYA",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 8-A",
+    "andar": "4",
+    "localizacao": "Direita / 3º baia / Janela"
   },
   {
     "id": 14,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "KARINE LAMMEL",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 8-B",
+    "andar": "4",
+    "localizacao": "Esquerda / Final do corredor / Esquerda"
   },
   {
     "id": 15,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "LETICIA MARINHO",
-    "id_setor": 3
+    "nome": "CONTABILIDADE 8-C",
+    "andar": "4",
+    "localizacao": "Direita / 3 ºbaia a esquerda"
   },
   {
     "id": 16,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "MARCELA NUNES",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-B",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 17,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "MARIA VIANA",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-C",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 18,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "MATHEUS PAULO",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-D",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 19,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "NATHALIA CARVALHO",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-E",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 20,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "PAMELA NASCIMENTO",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-F",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 21,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "SARA SILVA",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-H",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 22,
-    "setores": "CONTABILIDADE 1-A",
-    "usuarios": "SHAIENE SOTELO",
-    "id_setor": 3
+    "nome": "DEPARTAMENTO PESSOAL 5-J",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 23,
-    "setores": "CONTABILIDADE 1-B",
-    "usuarios": "CAMILLE VITORIA",
-    "id_setor": 4
+    "nome": "DEPARTAMENTO PESSOAL INTERNO",
+    "andar": "10",
+    "localizacao": "Direita"
   },
   {
     "id": 24,
-    "setores": "CONTABILIDADE 1-B",
-    "usuarios": "FLAVIA PONTES",
-    "id_setor": 4
+    "nome": "DIRETORIA",
+    "andar": "10",
+    "localizacao": ""
   },
   {
     "id": 25,
-    "setores": "CONTABILIDADE 1-B",
-    "usuarios": "GIOVANA BALESTRERO",
-    "id_setor": 4
+    "nome": "FINANCEIRO DPC",
+    "andar": "10",
+    "localizacao": "Esquerda / Frente ao balcão ADM"
   },
   {
     "id": 26,
-    "setores": "CONTABILIDADE 1-B",
-    "usuarios": "GISELY PORTUGAL",
-    "id_setor": 4
+    "nome": "GESTÃO FINANCEIRA 4-D",
+    "andar": "10",
+    "localizacao": "Direita / Final do corredor à Esquerda"
   },
   {
     "id": 27,
-    "setores": "CONTABILIDADE 1-B",
-    "usuarios": "MAIRA FONSECA",
-    "id_setor": 4
+    "nome": "GESTÃO FINANCEIRA 9-A",
+    "andar": "4",
+    "localizacao": "Esquerda / Final do corredor / Direita"
   },
   {
     "id": 28,
-    "setores": "CONTABILIDADE 1-B",
-    "usuarios": "MIGUEL MARQUES",
-    "id_setor": 4
+    "nome": "GESTÃO FINANCEIRA 9-B",
+    "andar": "4",
+    "localizacao": "Esquerda / Final do corredor / Direita"
   },
   {
     "id": 29,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "CAMILA GERALDO",
-    "id_setor": 5
+    "nome": "IMPLANTAÇÃO ATHENAS",
+    "andar": "10",
+    "localizacao": "Esquerda / Sala de Aquário de Vidro"
   },
   {
     "id": 30,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "FELIPE LIMA",
-    "id_setor": 5
+    "nome": "IMPOSTOS 1-A",
+    "andar": "Novo 5",
+    "localizacao": "Esquerda / Direita da sala de reunião"
   },
   {
     "id": 31,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "JOSE RENATO",
-    "id_setor": 5
+    "nome": "IMPOSTOS 2-A",
+    "andar": "Velho 5",
+    "localizacao": "Frente a escada"
   },
   {
     "id": 32,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "LUIZ AMARAL",
-    "id_setor": 5
+    "nome": "IMPOSTOS 2-B",
+    "andar": "Velho 5",
+    "localizacao": "Direita / Final do corredor à Direita"
   },
   {
     "id": 33,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "RAFAELA DIAS",
-    "id_setor": 5
+    "nome": "IMPOSTOS 2-C",
+    "andar": "Velho 5",
+    "localizacao": "Direita / Em frente a sala da Glória"
   },
   {
     "id": 34,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "ROQUE THOMAS",
-    "id_setor": 5
+    "nome": "IMPOSTOS 3-A",
+    "andar": "Novo 5",
+    "localizacao": "Direita / Sala à direita / Meio"
   },
   {
     "id": 35,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "TERESA DIAS",
-    "id_setor": 5
+    "nome": "IMPOSTOS 4-B",
+    "andar": "10",
+    "localizacao": "Direita / Final do corredor"
   },
   {
     "id": 36,
-    "setores": "CONTABILIDADE 2-A",
-    "usuarios": "VINICIUS CHAVES",
-    "id_setor": 5
+    "nome": "IMPOSTOS 4-D",
+    "andar": "10",
+    "localizacao": "Direita / Final do corredor à Esquerda"
   },
   {
     "id": 37,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "BRUNA GABRIELA",
-    "id_setor": 6
+    "nome": "IMPOSTOS 8-A",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 38,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "DANIEL DAMASO",
-    "id_setor": 6
+    "nome": "LABTECH",
+    "andar": "4",
+    "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 39,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "ERYKA SOARES",
-    "id_setor": 6
+    "nome": "NOVOS NEGÓCIOS",
+    "andar": "4",
+    "localizacao": "Direita / Antes do CPD"
   },
   {
     "id": 40,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "PATRICIA MEUREN",
-    "id_setor": 6
+    "nome": "OBRIGAÇÕES ACESSÓRIAS",
+    "andar": "4",
+    "localizacao": "Direita / Final do corredor"
   },
   {
     "id": 41,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "RICARDO PEREIRA",
-    "id_setor": 6
+    "nome": "PARALEGAL",
+    "andar": "10",
+    "localizacao": "Direita / Final do corredor"
   },
   {
     "id": 42,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "STHEFANY ABREU",
-    "id_setor": 6
+    "nome": "RECEPÇÃO",
+    "andar": "4 ou 10",
+    "localizacao": "Entrada"
   },
   {
     "id": 43,
-    "setores": "CONTABILIDADE 2-B",
-    "usuarios": "THIAGO MORENO",
-    "id_setor": 6
+    "nome": "RECURSOS HUMANOS",
+    "andar": "4",
+    "localizacao": "Esquerda / Frente ao bebedouro"
   },
   {
     "id": 44,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "ARIANA PINHO",
-    "id_setor": 7
+    "nome": "SISTEMA CONTÁBIL / FISCAL",
+    "andar": "10",
+    "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 45,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "BARBARA MACHARETE",
-    "id_setor": 7
+    "nome": "SISTEMA DP / RH",
+    "andar": "10",
+    "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 46,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "CARLOS SANTOS",
-    "id_setor": 7
+    "nome": "COMUNICAÇÃO E MARKETING / GESTÃO INF",
+    "andar": "4",
+    "localizacao": "Esquerda / Ao lado do CPD"
   },
   {
     "id": 47,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "GABRIEL CENA",
-    "id_setor": 7
+    "nome": "ADMINISTRAÇÃO",
+    "andar": "10",
+    "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"
   },
   {
     "id": 48,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "MARIA GOMES",
-    "id_setor": 7
+    "nome": "CONTABILIDADE 1-C",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 49,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "RAYANNE CORREA",
-    "id_setor": 7
+    "nome": "CONTABILIDADE 22-A",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 50,
-    "setores": "CONTABILIDADE 2-C",
-    "usuarios": "THIAGO GLASER",
-    "id_setor": 7
+    "nome": "CONTABILIDADE 22-B",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 51,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "AGATHA GOMES",
-    "id_setor": 10
+    "nome": "CONTABILIDADE 22-C",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 52,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "ANGELICA FERNANDES",
-    "id_setor": 10
+    "nome": "CONTABILIDADE 22-D",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 53,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "GABRIELLA ALVARENGA",
-    "id_setor": 10
+    "nome": "CONTABILIDADE 22-E",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 54,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "MARIA DRUMMOND",
-    "id_setor": 10
+    "nome": "IMPOSTOS 22-A",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 55,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "MARLON RAMOS",
-    "id_setor": 10
+    "nome": "IMPOSTOS 22-C",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 56,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "MATHEUS NASCIMENTO",
-    "id_setor": 10
+    "nome": "IMPOSTOS 22-D",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 57,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "RENATO SANTOS",
-    "id_setor": 10
+    "nome": "IMPOSTOS 22-F",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 58,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "RICARDO MEDEIROS",
-    "id_setor": 10
+    "nome": "IMPOSTOS 22-G",
+    "andar": "",
+    "localizacao": ""
   },
   {
     "id": 59,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "TAMARA MEDEIROS",
-    "id_setor": 10
-  },
-  {
-    "id": 60,
-    "setores": "CONTABILIDADE 3-C",
-    "usuarios": "VINICIUS PINHEIRO",
-    "id_setor": 10
-  },
-  {
-    "id": 61,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "BRUNO PADUA",
-    "id_setor": 11
-  },
-  {
-    "id": 62,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "GIUSEPPE GIGLIO",
-    "id_setor": 11
-  },
-  {
-    "id": 63,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "KAYQUE DIONISIO",
-    "id_setor": 11
-  },
-  {
-    "id": 64,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "LUCAS TARANTO",
-    "id_setor": 11
-  },
-  {
-    "id": 65,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "SUZANA MEDINA",
-    "id_setor": 11
-  },
-  {
-    "id": 66,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "VERONICA COSTA",
-    "id_setor": 11
-  },
-  {
-    "id": 67,
-    "setores": "CONTABILIDADE 3-D",
-    "usuarios": "VICTOR CARRETE",
-    "id_setor": 11
-  },
-  {
-    "id": 68,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "ALEX BARBOSA",
-    "id_setor": 12
-  },
-  {
-    "id": 69,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "ANA PAULA NAZARETH",
-    "id_setor": 12
-  },
-  {
-    "id": 70,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "DIEGO FARIA",
-    "id_setor": 12
-  },
-  {
-    "id": 71,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "JESSICA MONTEIRO",
-    "id_setor": 12
-  },
-  {
-    "id": 72,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "JOAO NERES",
-    "id_setor": 12
-  },
-  {
-    "id": 73,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "MAURICIO MORAIS",
-    "id_setor": 12
-  },
-  {
-    "id": 74,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "NAYARA MARTINS",
-    "id_setor": 12
-  },
-  {
-    "id": 75,
-    "setores": "CONTABILIDADE 3-E",
-    "usuarios": "PAOLLA BABO",
-    "id_setor": 12
-  },
-  {
-    "id": 76,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "ALINE BONOTO",
-    "id_setor": 13
-  },
-  {
-    "id": 77,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "ANDRE CANDIDO",
-    "id_setor": 13
-  },
-  {
-    "id": 78,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "FABRICIO LYRA",
-    "id_setor": 13
-  },
-  {
-    "id": 79,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "GISELE MARVILA",
-    "id_setor": 13
-  },
-  {
-    "id": 80,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "LAIS BRUM",
-    "id_setor": 13
-  },
-  {
-    "id": 81,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "LUCAS OLIVEIRA",
-    "id_setor": 13
-  },
-  {
-    "id": 82,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "LUIS FERREIRA",
-    "id_setor": 13
-  },
-  {
-    "id": 83,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "PIETRA VICENSE",
-    "id_setor": 13
-  },
-  {
-    "id": 84,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "RENAN PINHEIRO",
-    "id_setor": 13
-  },
-  {
-    "id": 85,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "RENATA PERES",
-    "id_setor": 13
-  },
-  {
-    "id": 86,
-    "setores": "CONTABILIDADE 8-A",
-    "usuarios": "RENATO BEZERRA",
-    "id_setor": 13
-  },
-  {
-    "id": 87,
-    "setores": "CONTABILIDADE 8-B",
-    "usuarios": "ARTHUR MANHAES",
-    "id_setor": 14
-  },
-  {
-    "id": 88,
-    "setores": "CONTABILIDADE 8-B",
-    "usuarios": "CAIO YAN",
-    "id_setor": 14
-  },
-  {
-    "id": 89,
-    "setores": "CONTABILIDADE 8-B",
-    "usuarios": "CARLOS BARBOSA",
-    "id_setor": 14
-  },
-  {
-    "id": 90,
-    "setores": "CONTABILIDADE 8-B",
-    "usuarios": "DOUGLAS AZEVEDO",
-    "id_setor": 14
-  },
-  {
-    "id": 91,
-    "setores": "CONTABILIDADE 8-B",
-    "usuarios": "GUSTAVO MATOS",
-    "id_setor": 14
-  },
-  {
-    "id": 92,
-    "setores": "CONTABILIDADE 8-B",
-    "usuarios": "PALOMA MELLO",
-    "id_setor": 14
-  },
-  {
-    "id": 93,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "ALEF BEZERRA",
-    "id_setor": 15
-  },
-  {
-    "id": 94,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "LEANDRO BARBOSA",
-    "id_setor": 15
-  },
-  {
-    "id": 95,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "LORHANNA HEIZER",
-    "id_setor": 15
-  },
-  {
-    "id": 96,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "LUIDY BOTELHO",
-    "id_setor": 15
-  },
-  {
-    "id": 97,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "LUIZ CASTRO",
-    "id_setor": 15
-  },
-  {
-    "id": 98,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "RAQUEL LOREDANA",
-    "id_setor": 15
-  },
-  {
-    "id": 99,
-    "setores": "CONTABILIDADE 8-C",
-    "usuarios": "THAISE ANDRADE",
-    "id_setor": 15
-  },
-  {
-    "id": 100,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "ANA CANAFISTULA",
-    "id_setor": 16
-  },
-  {
-    "id": 101,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "CAROLINA LORETO",
-    "id_setor": 16
-  },
-  {
-    "id": 102,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "DANIELE BERTHOLIN",
-    "id_setor": 16
-  },
-  {
-    "id": 103,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "DENISE ALVES",
-    "id_setor": 16
-  },
-  {
-    "id": 104,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "FABIOLA MIRANDA",
-    "id_setor": 16
-  },
-  {
-    "id": 105,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "GABRIELLA RITO",
-    "id_setor": 16
-  },
-  {
-    "id": 106,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "ISABELA GAMA",
-    "id_setor": 16
-  },
-  {
-    "id": 107,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "LEONARDO COSTA",
-    "id_setor": 16
-  },
-  {
-    "id": 108,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "LETICIA LISBOA",
-    "id_setor": 16
-  },
-  {
-    "id": 109,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "MARIANA BRUNACIO",
-    "id_setor": 16
-  },
-  {
-    "id": 110,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "RAYANNE BRASIL",
-    "id_setor": 16
-  },
-  {
-    "id": 111,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "ROSANA VIANNA",
-    "id_setor": 16
-  },
-  {
-    "id": 112,
-    "setores": "DEPARTAMENTO PESSOAL 5-B",
-    "usuarios": "STEPHANIE GONCALVES",
-    "id_setor": 16
-  },
-  {
-    "id": 113,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "ALINE NASCIMENTO",
-    "id_setor": 17
-  },
-  {
-    "id": 114,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "AMANDA ARAUJO",
-    "id_setor": 17
-  },
-  {
-    "id": 115,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "AMANDA BERNARDO",
-    "id_setor": 17
-  },
-  {
-    "id": 116,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "ANA ASSUMPCAO",
-    "id_setor": 17
-  },
-  {
-    "id": 117,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "BEATRIZ FONSECA",
-    "id_setor": 17
-  },
-  {
-    "id": 118,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "BRENDA ARAUJO",
-    "id_setor": 17
-  },
-  {
-    "id": 119,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "GABRIELLA NICASTRO",
-    "id_setor": 17
-  },
-  {
-    "id": 120,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "GIOVANNI OLIVEIRA",
-    "id_setor": 17
-  },
-  {
-    "id": 121,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "IVIE LEMOS",
-    "id_setor": 17
-  },
-  {
-    "id": 122,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "LAIS BOGEA",
-    "id_setor": 17
-  },
-  {
-    "id": 123,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "LARISSA TERRA",
-    "id_setor": 17
-  },
-  {
-    "id": 124,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "LEONARDO SILVA",
-    "id_setor": 17
-  },
-  {
-    "id": 125,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "LUCIANA VIEIRA",
-    "id_setor": 17
-  },
-  {
-    "id": 126,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "MANOELA LIMA",
-    "id_setor": 17
-  },
-  {
-    "id": 127,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "MARIANA ALVARENGA",
-    "id_setor": 17
-  },
-  {
-    "id": 128,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "NAYARA PASSOS",
-    "id_setor": 17
-  },
-  {
-    "id": 129,
-    "setores": "DEPARTAMENTO PESSOAL 5-C",
-    "usuarios": "THAYNARA MARQUES",
-    "id_setor": 17
-  },
-  {
-    "id": 130,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "AMANDA MARINHO",
-    "id_setor": 18
-  },
-  {
-    "id": 131,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "ANA CARVALHO",
-    "id_setor": 18
-  },
-  {
-    "id": 132,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "ANA XAVIER",
-    "id_setor": 18
-  },
-  {
-    "id": 133,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "CARMEN ARAUJO",
-    "id_setor": 18
-  },
-  {
-    "id": 134,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "CAROLLINE COELHO",
-    "id_setor": 18
-  },
-  {
-    "id": 135,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "LARISSA ZURMELE",
-    "id_setor": 18
-  },
-  {
-    "id": 136,
-    "setores": "DEPARTAMENTO PESSOAL 5-D",
-    "usuarios": "LIVIA NETTO",
-    "id_setor": 18
-  },
-  {
-    "id": 137,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "AMANDA SANTOS",
-    "id_setor": 19
-  },
-  {
-    "id": 138,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "ANA ELISE",
-    "id_setor": 19
-  },
-  {
-    "id": 139,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "CLARA ANNES",
-    "id_setor": 19
-  },
-  {
-    "id": 140,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "PAMELA MEDEIROS",
-    "id_setor": 19
-  },
-  {
-    "id": 141,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "QUEZIA MARTINS",
-    "id_setor": 19
-  },
-  {
-    "id": 142,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "ROMARIO FERREIRA",
-    "id_setor": 19
-  },
-  {
-    "id": 143,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "THAMIRIS ESTEVES",
-    "id_setor": 19
-  },
-  {
-    "id": 144,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "VICTORIA LIMA",
-    "id_setor": 19
-  },
-  {
-    "id": 145,
-    "setores": "DEPARTAMENTO PESSOAL 5-E",
-    "usuarios": "YAGO DA SILVA",
-    "id_setor": 19
-  },
-  {
-    "id": 146,
-    "setores": "DEPARTAMENTO PESSOAL 5-F",
-    "usuarios": "BEATRIZ LOUREIRO",
-    "id_setor": 20
-  },
-  {
-    "id": 147,
-    "setores": "DEPARTAMENTO PESSOAL 5-F",
-    "usuarios": "CAMILA GOMES",
-    "id_setor": 20
-  },
-  {
-    "id": 148,
-    "setores": "DEPARTAMENTO PESSOAL 5-F",
-    "usuarios": "GABRIELLE ROZARIO",
-    "id_setor": 20
-  },
-  {
-    "id": 149,
-    "setores": "DEPARTAMENTO PESSOAL 5-F",
-    "usuarios": "VIRGINIA ZANI",
-    "id_setor": 20
-  },
-  {
-    "id": 150,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "CARLA CRISTHINA",
-    "id_setor": 22
-  },
-  {
-    "id": 151,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "ELISANGELA BERNARDO",
-    "id_setor": 22
-  },
-  {
-    "id": 152,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "KAMILLA RODRIGUES",
-    "id_setor": 22
-  },
-  {
-    "id": 153,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "LAYZA FREITAS",
-    "id_setor": 22
-  },
-  {
-    "id": 154,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "REYNAN LIMA",
-    "id_setor": 22
-  },
-  {
-    "id": 155,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "SAMARA LINO",
-    "id_setor": 22
-  },
-  {
-    "id": 156,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "WESLLEY MARTINS",
-    "id_setor": 22
-  },
-  {
-    "id": 157,
-    "setores": "DEPARTAMENTO PESSOAL 5-J",
-    "usuarios": "YTALLA SALES",
-    "id_setor": 22
-  },
-  {
-    "id": 158,
-    "setores": "DEPARTAMENTO PESSOAL INTERNO",
-    "usuarios": "BRUNA DUARTE",
-    "id_setor": 23
-  },
-  {
-    "id": 159,
-    "setores": "DEPARTAMENTO PESSOAL INTERNO",
-    "usuarios": "MAYARA MELIGA",
-    "id_setor": 23
-  },
-  {
-    "id": 160,
-    "setores": "DEPARTAMENTO PESSOAL INTERNO",
-    "usuarios": "SARA MACEDO",
-    "id_setor": 23
-  },
-  {
-    "id": 161,
-    "setores": "DEPARTAMENTO PESSOAL INTERNO",
-    "usuarios": "SUZANE MARTINS",
-    "id_setor": 23
-  },
-  {
-    "id": 162,
-    "setores": "DPC PRIVATE",
-    "usuarios": "ANTHONY VICTOR",
-    "id_setor": 2
-  },
-  {
-    "id": 163,
-    "setores": "DPC PRIVATE",
-    "usuarios": "CAMILLY AZEVEDO",
-    "id_setor": 2
-  },
-  {
-    "id": 164,
-    "setores": "DPC PRIVATE",
-    "usuarios": "HENRIQUE ALVES",
-    "id_setor": 2
-  },
-  {
-    "id": 165,
-    "setores": "DPC PRIVATE",
-    "usuarios": "JOAO BENTO",
-    "id_setor": 2
-  },
-  {
-    "id": 166,
-    "setores": "DPC PRIVATE",
-    "usuarios": "JULIA PERES",
-    "id_setor": 2
-  },
-  {
-    "id": 167,
-    "setores": "DPC PRIVATE",
-    "usuarios": "KARLLA LEMOS",
-    "id_setor": 2
-  },
-  {
-    "id": 168,
-    "setores": "DPC PRIVATE",
-    "usuarios": "MATHEUS VINICIUS",
-    "id_setor": 2
-  },
-  {
-    "id": 169,
-    "setores": "DPC PRIVATE",
-    "usuarios": "PAMELA MENDONCA",
-    "id_setor": 2
-  },
-  {
-    "id": 170,
-    "setores": "DPC PRIVATE",
-    "usuarios": "RAQUEL NEPOMUCENO",
-    "id_setor": 2
-  },
-  {
-    "id": 171,
-    "setores": "DPC PRIVATE",
-    "usuarios": "RYLLORY SANTANA",
-    "id_setor": 2
-  },
-  {
-    "id": 172,
-    "setores": "FINANCEIRO",
-    "usuarios": "BRENO MAGALHAES",
-    "id_setor": 25
-  },
-  {
-    "id": 173,
-    "setores": "FINANCEIRO",
-    "usuarios": "CAMILA SOBRAL",
-    "id_setor": 25
-  },
-  {
-    "id": 174,
-    "setores": "FINANCEIRO",
-    "usuarios": "CARLOS CUNHA",
-    "id_setor": 25
-  },
-  {
-    "id": 175,
-    "setores": "FINANCEIRO",
-    "usuarios": "NATACIANE PRUDENCIO",
-    "id_setor": 25
-  },
-  {
-    "id": 176,
-    "setores": "FINANCEIRO",
-    "usuarios": "RACHEL LOPES",
-    "id_setor": 25
-  },
-  {
-    "id": 177,
-    "setores": "FINANCEIRO",
-    "usuarios": "VINICIUS ROCHA",
-    "id_setor": 25
-  },
-  {
-    "id": 178,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "AGATHA BORGES",
-    "id_setor": 26
-  },
-  {
-    "id": 179,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "DEBORA CAETANO",
-    "id_setor": 26
-  },
-  {
-    "id": 180,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "EDILSON BORGES",
-    "id_setor": 26
-  },
-  {
-    "id": 181,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "FLAVIANE FELIPE",
-    "id_setor": 26
-  },
-  {
-    "id": 182,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "PATRICIA HENRIQUE",
-    "id_setor": 26
-  },
-  {
-    "id": 183,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "PHILIP MARTINS",
-    "id_setor": 26
-  },
-  {
-    "id": 184,
-    "setores": "GESTAO FINANCEIRA 4-D",
-    "usuarios": "RAQUEL FAGUNDES",
-    "id_setor": 26
-  },
-  {
-    "id": 185,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "CAMILA GASPARELLO",
-    "id_setor": 27
-  },
-  {
-    "id": 186,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "FERNANDA MAIA",
-    "id_setor": 27
-  },
-  {
-    "id": 187,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "GABRIEL MOREIRA",
-    "id_setor": 27
-  },
-  {
-    "id": 188,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "GABRIELA VILELA",
-    "id_setor": 27
-  },
-  {
-    "id": 189,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "GIOVANNA SILVA",
-    "id_setor": 27
-  },
-  {
-    "id": 190,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "GLAUCE ANTUNES",
-    "id_setor": 27
-  },
-  {
-    "id": 191,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "IGOR MOREIRA",
-    "id_setor": 27
-  },
-  {
-    "id": 192,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "JEFFERSON GONCALVES",
-    "id_setor": 27
-  },
-  {
-    "id": 193,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "JOAO SARMENTO",
-    "id_setor": 27
-  },
-  {
-    "id": 194,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "KETELLYN BARBOSA",
-    "id_setor": 27
-  },
-  {
-    "id": 195,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "LEONARDO MENDES",
-    "id_setor": 27
-  },
-  {
-    "id": 196,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "LETICIA PORTUGAL",
-    "id_setor": 27
-  },
-  {
-    "id": 197,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "NATHALIA SCHMITT",
-    "id_setor": 27
-  },
-  {
-    "id": 198,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "NICOLAS BALBINO",
-    "id_setor": 27
-  },
-  {
-    "id": 199,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "VICTOR SIQUEIRA",
-    "id_setor": 27
-  },
-  {
-    "id": 200,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "VICTOR TRAJANO",
-    "id_setor": 27
-  },
-  {
-    "id": 201,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "VIVIAN COSTA",
-    "id_setor": 27
-  },
-  {
-    "id": 202,
-    "setores": "GESTAO FINANCEIRA 9-A",
-    "usuarios": "YAN SANTANA",
-    "id_setor": 27
-  },
-  {
-    "id": 203,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "ANDRE ALMEIDA",
-    "id_setor": 28
-  },
-  {
-    "id": 204,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "GRAZIELLE ARAUJO",
-    "id_setor": 28
-  },
-  {
-    "id": 205,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "LEANDRO FORTUNATO",
-    "id_setor": 28
-  },
-  {
-    "id": 206,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "LEONARDO CARVALHO",
-    "id_setor": 28
-  },
-  {
-    "id": 207,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "LETICIA RODRIGUES",
-    "id_setor": 28
-  },
-  {
-    "id": 208,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "MARCELO SANTOS",
-    "id_setor": 28
-  },
-  {
-    "id": 209,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "MATHEUS PESSANHA",
-    "id_setor": 28
-  },
-  {
-    "id": 210,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "MAYARA MATTOS",
-    "id_setor": 28
-  },
-  {
-    "id": 211,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "RAFAEL FERREIRA",
-    "id_setor": 28
-  },
-  {
-    "id": 212,
-    "setores": "GESTAO FINANCEIRA 9-B",
-    "usuarios": "TAYANE SANTOS",
-    "id_setor": 28
-  },
-  {
-    "id": 213,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "ALINE CRISTINA",
-    "id_setor": null
-  },
-  {
-    "id": 214,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "ANA BARROS",
-    "id_setor": null
-  },
-  {
-    "id": 215,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "BRUNA PATRICIA",
-    "id_setor": null
-  },
-  {
-    "id": 216,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "CAIO CAMPOS",
-    "id_setor": null
-  },
-  {
-    "id": 217,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "CESAR MARQUES",
-    "id_setor": null
-  },
-  {
-    "id": 218,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "INGRID ASSIS",
-    "id_setor": null
-  },
-  {
-    "id": 219,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "JULIANA GALDINO",
-    "id_setor": null
-  },
-  {
-    "id": 220,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "RAISSA INACIO",
-    "id_setor": null
-  },
-  {
-    "id": 221,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "VINICIUS NASCIMENTO",
-    "id_setor": null
-  },
-  {
-    "id": 222,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "VITOR MARINGOLO",
-    "id_setor": null
-  },
-  {
-    "id": 223,
-    "setores": "GESTÃO FINANCEIRA 9-C",
-    "usuarios": "WAGNER MARTINS",
-    "id_setor": null
-  },
-  {
-    "id": 224,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "ANA BEATRIZ",
-    "id_setor": 30
-  },
-  {
-    "id": 225,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "FELIPE BRASIL",
-    "id_setor": 30
-  },
-  {
-    "id": 226,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "LEONNY ROSALIA",
-    "id_setor": 30
-  },
-  {
-    "id": 227,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "MARIANA COIMBRA",
-    "id_setor": 30
-  },
-  {
-    "id": 228,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "MATHEUS MONTEIRO",
-    "id_setor": 30
-  },
-  {
-    "id": 229,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "RAFAELA BARBOSA",
-    "id_setor": 30
-  },
-  {
-    "id": 230,
-    "setores": "IMPOSTOS 1-A",
-    "usuarios": "RAPHAELA COSTA",
-    "id_setor": 30
-  },
-  {
-    "id": 231,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "BEATRIZ BARBOSA",
-    "id_setor": 31
-  },
-  {
-    "id": 232,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "DAIANA BARBOZA",
-    "id_setor": 31
-  },
-  {
-    "id": 233,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "DEBORA MORAES",
-    "id_setor": 31
-  },
-  {
-    "id": 234,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "DEISE CRISTINA",
-    "id_setor": 31
-  },
-  {
-    "id": 235,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "GIOVANNA FURLANI",
-    "id_setor": 31
-  },
-  {
-    "id": 236,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "KARINA NEVES",
-    "id_setor": 31
-  },
-  {
-    "id": 237,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "LILIAN CALDAS",
-    "id_setor": 31
-  },
-  {
-    "id": 238,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "LUCAS TEIXEIRA",
-    "id_setor": 31
-  },
-  {
-    "id": 239,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "PATRICIA JACINTO",
-    "id_setor": 31
-  },
-  {
-    "id": 240,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "RAMON COSTA",
-    "id_setor": 31
-  },
-  {
-    "id": 241,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "STHEFANY FARIAS",
-    "id_setor": 31
-  },
-  {
-    "id": 242,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "THAYNAN SOUZA",
-    "id_setor": 31
-  },
-  {
-    "id": 243,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "VANESSA QUEIROZ",
-    "id_setor": 31
-  },
-  {
-    "id": 244,
-    "setores": "IMPOSTOS 2-A",
-    "usuarios": "VINICIUS SOARES",
-    "id_setor": 31
-  },
-  {
-    "id": 245,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "ALDENIRA SOUZA",
-    "id_setor": 32
-  },
-  {
-    "id": 246,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "CAMILA ALMEIDA",
-    "id_setor": 32
-  },
-  {
-    "id": 247,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "CINTIA PEREIRA",
-    "id_setor": 32
-  },
-  {
-    "id": 248,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "ISAIAS DIONIZIO",
-    "id_setor": 32
-  },
-  {
-    "id": 249,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "JOAO BASILIO",
-    "id_setor": 32
-  },
-  {
-    "id": 250,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "JULIANA SOUZA",
-    "id_setor": 32
-  },
-  {
-    "id": 251,
-    "setores": "IMPOSTOS 2-B",
-    "usuarios": "KAUA DINIZ",
-    "id_setor": 32
-  },
-  {
-    "id": 252,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "DENISE CRUZ",
-    "id_setor": 33
-  },
-  {
-    "id": 253,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "HERALDO JUNIOR",
-    "id_setor": 33
-  },
-  {
-    "id": 254,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "JHONY BENDOR",
-    "id_setor": 33
-  },
-  {
-    "id": 255,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "LUIZ GONCALVES",
-    "id_setor": 33
-  },
-  {
-    "id": 256,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "RAFAELLE ANITA",
-    "id_setor": 33
-  },
-  {
-    "id": 257,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "SUELLEN AMARAL",
-    "id_setor": 33
-  },
-  {
-    "id": 258,
-    "setores": "IMPOSTOS 2-C",
-    "usuarios": "VANESSA CASTRO",
-    "id_setor": 33
-  },
-  {
-    "id": 259,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "CAROLINE AMARAL",
-    "id_setor": 34
-  },
-  {
-    "id": 260,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "CINTIA MONTEIRO",
-    "id_setor": 34
-  },
-  {
-    "id": 261,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "DANIEL COSTA",
-    "id_setor": 34
-  },
-  {
-    "id": 262,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "JESSICA LAURA",
-    "id_setor": 34
-  },
-  {
-    "id": 263,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "JOAO VITOR COSTA",
-    "id_setor": 34
-  },
-  {
-    "id": 264,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "KAROLINE GONCALVES",
-    "id_setor": 34
-  },
-  {
-    "id": 265,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "MARCOS PAULO",
-    "id_setor": 34
-  },
-  {
-    "id": 266,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "MARINA MELLO",
-    "id_setor": 34
-  },
-  {
-    "id": 267,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "NIKOLAS ACHATZ",
-    "id_setor": 34
-  },
-  {
-    "id": 268,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "PAULO TANNURI",
-    "id_setor": 34
-  },
-  {
-    "id": 269,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "RYAN GOMES",
-    "id_setor": 34
-  },
-  {
-    "id": 270,
-    "setores": "IMPOSTOS 3-A",
-    "usuarios": "VITOR VIEIRA",
-    "id_setor": 34
-  },
-  {
-    "id": 271,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "ANGELO ALEIXO",
-    "id_setor": 35
-  },
-  {
-    "id": 272,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "BRUNA MELO",
-    "id_setor": 35
-  },
-  {
-    "id": 273,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "BRUNA OLIVEIRA",
-    "id_setor": 35
-  },
-  {
-    "id": 274,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "ESTER MARQUES",
-    "id_setor": 35
-  },
-  {
-    "id": 275,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "GABRIEL RONZANI",
-    "id_setor": 35
-  },
-  {
-    "id": 276,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "GUSTAVO MORATELLI",
-    "id_setor": 35
-  },
-  {
-    "id": 277,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "IVE DE FREITAS",
-    "id_setor": 35
-  },
-  {
-    "id": 278,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "JONAS LEAL",
-    "id_setor": 35
-  },
-  {
-    "id": 279,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "LETICIA CARRILHO",
-    "id_setor": 35
-  },
-  {
-    "id": 280,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "MIRELLA MARQUES",
-    "id_setor": 35
-  },
-  {
-    "id": 281,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "MOZART ANDRADE",
-    "id_setor": 35
-  },
-  {
-    "id": 282,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "PRISCILA CLEMENTE",
-    "id_setor": 35
-  },
-  {
-    "id": 283,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "RAFAEL ALMEIDA",
-    "id_setor": 35
-  },
-  {
-    "id": 284,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "RENATA SANTOS",
-    "id_setor": 35
-  },
-  {
-    "id": 285,
-    "setores": "IMPOSTOS 4-B",
-    "usuarios": "VALESCA RODRIGUES",
-    "id_setor": 35
-  },
-  {
-    "id": 286,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "ALESSANDRA RIBEIRO",
-    "id_setor": 36
-  },
-  {
-    "id": 287,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "ANTONIO MARTINS",
-    "id_setor": 36
-  },
-  {
-    "id": 288,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "BEATRIZ GRACA",
-    "id_setor": 36
-  },
-  {
-    "id": 289,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "CAROLAINE BASTOS",
-    "id_setor": 36
-  },
-  {
-    "id": 290,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "CAROLINA GAGLIANONI",
-    "id_setor": 36
-  },
-  {
-    "id": 291,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "IGOR CORREA",
-    "id_setor": 36
-  },
-  {
-    "id": 292,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "IGOR GENUINO",
-    "id_setor": 36
-  },
-  {
-    "id": 293,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "JOYCE DANTAS",
-    "id_setor": 36
-  },
-  {
-    "id": 294,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "KETLIN SANTOS",
-    "id_setor": 36
-  },
-  {
-    "id": 295,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "LUCIMERE SANTOS",
-    "id_setor": 36
-  },
-  {
-    "id": 296,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "MARIANE BRUM",
-    "id_setor": 36
-  },
-  {
-    "id": 297,
-    "setores": "IMPOSTOS 4-D",
-    "usuarios": "MAYLA PEREIRA",
-    "id_setor": 36
-  },
-  {
-    "id": 298,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "ANDRE VIDAL",
-    "id_setor": 37
-  },
-  {
-    "id": 299,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "DANIELE CANDIDO",
-    "id_setor": 37
-  },
-  {
-    "id": 300,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "JACQUELINE PISSARRA",
-    "id_setor": 37
-  },
-  {
-    "id": 301,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "JOAO GONCALVES",
-    "id_setor": 37
-  },
-  {
-    "id": 302,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "LARISSA BALBINO",
-    "id_setor": 37
-  },
-  {
-    "id": 303,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "LARISSA MAGALHAES",
-    "id_setor": 37
-  },
-  {
-    "id": 304,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "MICHAEL BATISTA",
-    "id_setor": 37
-  },
-  {
-    "id": 305,
-    "setores": "IMPOSTOS 8-A",
-    "usuarios": "VITORIA PEREIRA",
-    "id_setor": 37
-  },
-  {
-    "id": 306,
-    "setores": "Informática",
-    "usuarios": "ALUA OLIVEIRA",
-    "id_setor": 1
-  },
-  {
-    "id": 307,
-    "setores": "Informática",
-    "usuarios": "CAIO OLIVEIRA",
-    "id_setor": 1
-  },
-  {
-    "id": 308,
-    "setores": "Informática",
-    "usuarios": "DAVID OLIVEIRA",
-    "id_setor": 1
-  },
-  {
-    "id": 309,
-    "setores": "Informática",
-    "usuarios": "FELIPE GABRIEL",
-    "id_setor": 1
-  },
-  {
-    "id": 310,
-    "setores": "Informática",
-    "usuarios": "GUILHERME CARDOSO",
-    "id_setor": 1
-  },
-  {
-    "id": 311,
-    "setores": "Informática",
-    "usuarios": "GUILHERME SOARES",
-    "id_setor": 1
-  },
-  {
-    "id": 312,
-    "setores": "Informática",
-    "usuarios": "HIAGO CUNHA",
-    "id_setor": 1
-  },
-  {
-    "id": 313,
-    "setores": "Informática",
-    "usuarios": "KELVYN AZEVEDO",
-    "id_setor": 1
-  },
-  {
-    "id": 314,
-    "setores": "Informática",
-    "usuarios": "MARCOS LOFREDO",
-    "id_setor": 1
-  },
-  {
-    "id": 315,
-    "setores": "Informática",
-    "usuarios": "PATRICIA NASCIMENTO",
-    "id_setor": 1
-  },
-  {
-    "id": 316,
-    "setores": "Informática",
-    "usuarios": "RAFAEL SANTOS",
-    "id_setor": 1
-  },
-  {
-    "id": 317,
-    "setores": "Informática",
-    "usuarios": "RONALDO PEREIRA",
-    "id_setor": 1
-  },
-  {
-    "id": 318,
-    "setores": "LABTECH",
-    "usuarios": "ANA RODRIGUES",
-    "id_setor": 38
-  },
-  {
-    "id": 319,
-    "setores": "LABTECH",
-    "usuarios": "ANDREZZA BRITO",
-    "id_setor": 38
-  },
-  {
-    "id": 320,
-    "setores": "LABTECH",
-    "usuarios": "BRUNO PITER",
-    "id_setor": 38
-  },
-  {
-    "id": 321,
-    "setores": "LABTECH",
-    "usuarios": "CAIO ABRAAO",
-    "id_setor": 38
-  },
-  {
-    "id": 322,
-    "setores": "LABTECH",
-    "usuarios": "JOSE ROSA",
-    "id_setor": 38
-  },
-  {
-    "id": 323,
-    "setores": "LABTECH",
-    "usuarios": "MATEUS ASSIS",
-    "id_setor": 38
-  },
-  {
-    "id": 324,
-    "setores": "LABTECH",
-    "usuarios": "MATHEUS OLIVEIRA",
-    "id_setor": 38
-  },
-  {
-    "id": 325,
-    "setores": "LABTECH",
-    "usuarios": "RAPHAEL ESCH",
-    "id_setor": 38
-  },
-  {
-    "id": 326,
-    "setores": "MARKETING",
-    "usuarios": "ITALO BRAGA",
-    "id_setor": 46
-  },
-  {
-    "id": 327,
-    "setores": "MARKETING",
-    "usuarios": "THAMIRIS MUNIZ",
-    "id_setor": 46
-  },
-  {
-    "id": 328,
-    "setores": "NOVOS NEGÓCIOS",
-    "usuarios": "FABIANA SANTOS",
-    "id_setor": 39
-  },
-  {
-    "id": 329,
-    "setores": "NOVOS NEGÓCIOS",
-    "usuarios": "LEILA SA",
-    "id_setor": 39
-  },
-  {
-    "id": 330,
-    "setores": "OBRIGAÇÕES ACESSÓRIAS",
-    "usuarios": "JONATAS FERREIRA",
-    "id_setor": 40
-  },
-  {
-    "id": 331,
-    "setores": "OBRIGAÇÕES ACESSÓRIAS",
-    "usuarios": "KAMILA MUNIZ",
-    "id_setor": 40
-  },
-  {
-    "id": 332,
-    "setores": "OBRIGAÇÕES ACESSÓRIAS",
-    "usuarios": "PAMELLA TURQUES",
-    "id_setor": 40
-  },
-  {
-    "id": 333,
-    "setores": "OBRIGAÇÕES ACESSÓRIAS",
-    "usuarios": "REBECCA FRANCA",
-    "id_setor": 40
-  },
-  {
-    "id": 334,
-    "setores": "OBRIGAÇÕES ACESSÓRIAS",
-    "usuarios": "THIAGO ANDRADE",
-    "id_setor": 40
-  },
-  {
-    "id": 335,
-    "setores": "PARALEGAL",
-    "usuarios": "SAMUEL LIMA",
-    "id_setor": 41
-  },
-  {
-    "id": 336,
-    "setores": "PARALEGAL",
-    "usuarios": "THAIS MARQUES",
-    "id_setor": 41
-  },
-  {
-    "id": 337,
-    "setores": "PARALEGAL",
-    "usuarios": "THIAGO COELHO",
-    "id_setor": 41
-  },
-  {
-    "id": 338,
-    "setores": "PRESIDÊNCIA",
-    "usuarios": "MANUEL PINHO",
-    "id_setor": null
-  },
-  {
-    "id": 339,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "CAROLINE BULHOES",
-    "id_setor": 43
-  },
-  {
-    "id": 340,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "DANIEL MENDES",
-    "id_setor": 43
-  },
-  {
-    "id": 341,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "JESSICA DUARTE",
-    "id_setor": 43
-  },
-  {
-    "id": 342,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "LETICIA ANDRADE",
-    "id_setor": 43
-  },
-  {
-    "id": 343,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "LUCAS FIGUEIREDO",
-    "id_setor": 43
-  },
-  {
-    "id": 344,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "RICARDO PAIXAO",
-    "id_setor": 43
-  },
-  {
-    "id": 345,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "SARA ARRAES",
-    "id_setor": 43
-  },
-  {
-    "id": 346,
-    "setores": "RECURSOS HUMANOS",
-    "usuarios": "VICTOR HUGO",
-    "id_setor": 43
-  },
-  {
-    "id": 347,
-    "setores": "SISTEMAS CONTÁBEIS / FISCAIS",
-    "usuarios": "KAIO CESAR",
-    "id_setor": 44
-  },
-  {
-    "id": 348,
-    "setores": "SISTEMAS CONTÁBEIS / FISCAIS",
-    "usuarios": "KAYQUY ITAPARICA",
-    "id_setor": 44
-  },
-  {
-    "id": 349,
-    "setores": "SISTEMAS CONTÁBEIS / FISCAIS",
-    "usuarios": "NAIARA BASTOS",
-    "id_setor": 44
-  },
-  {
-    "id": 350,
-    "setores": "SISTEMAS CONTÁBEIS / FISCAIS",
-    "usuarios": "PEDRO MERLO",
-    "id_setor": 44
-  },
-  {
-    "id": 351,
-    "setores": "SISTEMAS CONTÁBEIS / FISCAIS",
-    "usuarios": "WLADIMIR PEREIRA",
-    "id_setor": 44
-  },
-  {
-    "id": 352,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "ALEXANDRE DE HOLANDA",
-    "id_setor": 45
-  },
-  {
-    "id": 353,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "ALINE PAIVA",
-    "id_setor": 45
-  },
-  {
-    "id": 354,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "ANA MEDEIROS",
-    "id_setor": 45
-  },
-  {
-    "id": 355,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "CARLOS ALMEIDA",
-    "id_setor": 45
-  },
-  {
-    "id": 356,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "EDUARDO GABINA",
-    "id_setor": 45
-  },
-  {
-    "id": 357,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "LUCAS ANTHONY",
-    "id_setor": 45
-  },
-  {
-    "id": 358,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "LUIZA CECI",
-    "id_setor": 45
-  },
-  {
-    "id": 359,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "NAIARA PERES",
-    "id_setor": 45
-  },
-  {
-    "id": 360,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "SAMUEL STANLEY",
-    "id_setor": 45
-  },
-  {
-    "id": 361,
-    "setores": "SISTEMAS DP / RH",
-    "usuarios": "WILSON BALTHAZAR",
-    "id_setor": 45
-  },
-  {
-    "id": 362,
-    "setores": "CONTABILIDADE 1-C",
-    "usuarios": "NATALIA REIS",
-    "id_setor": 48
-  },
-  {
-    "id": 363,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "ANE SOUZA",
-    "id_setor": 49
-  },
-  {
-    "id": 364,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "BIANCA SANTOS",
-    "id_setor": 49
-  },
-  {
-    "id": 365,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "IGOR DOLL",
-    "id_setor": 49
-  },
-  {
-    "id": 366,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "JEFFERSON FERRAZ",
-    "id_setor": 49
-  },
-  {
-    "id": 367,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "JOSE JACOB",
-    "id_setor": 49
-  },
-  {
-    "id": 368,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "MICHAELI CAVALCANTE",
-    "id_setor": 49
-  },
-  {
-    "id": 369,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "MICHEL BARBOSA",
-    "id_setor": 49
-  },
-  {
-    "id": 370,
-    "setores": "CONTABILIDADE 22-A",
-    "usuarios": "THALYNE VIEIRA",
-    "id_setor": 49
-  },
-  {
-    "id": 371,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "BEATRIZ GONÇALVES",
-    "id_setor": 50
-  },
-  {
-    "id": 372,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "CAMILA MELO",
-    "id_setor": 50
-  },
-  {
-    "id": 373,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "DAYARA FARIAS",
-    "id_setor": 50
-  },
-  {
-    "id": 374,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "FERNANDA SANTOS",
-    "id_setor": 50
-  },
-  {
-    "id": 375,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "GIULIANA MONTEIRO",
-    "id_setor": 50
-  },
-  {
-    "id": 376,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "HELEN BOMFIM",
-    "id_setor": 50
-  },
-  {
-    "id": 377,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "HELENA DUARTE",
-    "id_setor": 50
-  },
-  {
-    "id": 378,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "THIAGO FERRON",
-    "id_setor": 50
-  },
-  {
-    "id": 379,
-    "setores": "CONTABILIDADE 22-B",
-    "usuarios": "VANESSA DIAS",
-    "id_setor": 50
-  },
-  {
-    "id": 380,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "BRENO GONCALVES",
-    "id_setor": 51
-  },
-  {
-    "id": 381,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "JESSIKA POLATO",
-    "id_setor": 51
-  },
-  {
-    "id": 382,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "JHENIFFER SILVEIRA",
-    "id_setor": 51
-  },
-  {
-    "id": 383,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "LUIZ DELFORNO",
-    "id_setor": 51
-  },
-  {
-    "id": 384,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "PEDRO AUGUSTO",
-    "id_setor": 51
-  },
-  {
-    "id": 385,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "TAMIRES FERREIRA",
-    "id_setor": 51
-  },
-  {
-    "id": 386,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "TAMIRES LIMA",
-    "id_setor": 51
-  },
-  {
-    "id": 387,
-    "setores": "CONTABILIDADE 22-C",
-    "usuarios": "VIVIANE RIBEIRO",
-    "id_setor": 51
-  },
-  {
-    "id": 388,
-    "setores": "CONTABILIDADE 22-D",
-    "usuarios": "CAMILA ALVES",
-    "id_setor": 52
-  },
-  {
-    "id": 389,
-    "setores": "CONTABILIDADE 22-E",
-    "usuarios": "CIBELLE PINHEIRO",
-    "id_setor": 53
-  },
-  {
-    "id": 390,
-    "setores": "CONTABILIDADE 22-E",
-    "usuarios": "JULIO VALENTIM",
-    "id_setor": 53
-  },
-  {
-    "id": 391,
-    "setores": "CONTABILIDADE 22-E",
-    "usuarios": "MARCELO SILVA",
-    "id_setor": 53
-  },
-  {
-    "id": 392,
-    "setores": "CONTABILIDADE 22-E",
-    "usuarios": "YASMIM SOARES",
-    "id_setor": 53
-  },
-  {
-    "id": 393,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "ABDORAL BRAGA",
-    "id_setor": 54
-  },
-  {
-    "id": 394,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "AMANDA CARVALHO",
-    "id_setor": 54
-  },
-  {
-    "id": 395,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "DOUGLAS CARVALHO",
-    "id_setor": 54
-  },
-  {
-    "id": 396,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "FABIO MACEDO",
-    "id_setor": 54
-  },
-  {
-    "id": 397,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "GUILHERME FREIRE",
-    "id_setor": 54
-  },
-  {
-    "id": 398,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "GUILHERME KEVIN",
-    "id_setor": 54
-  },
-  {
-    "id": 399,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "JESSICA RODRIGUES",
-    "id_setor": 54
-  },
-  {
-    "id": 400,
-    "setores": "IMPOSTOS 22-A",
-    "usuarios": "LARISSA BATISTA",
-    "id_setor": 54
-  },
-  {
-    "id": 401,
-    "setores": "IMPOSTOS 22-C",
-    "usuarios": "LIEGI ALVES",
-    "id_setor": 55
-  },
-  {
-    "id": 402,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "ALEX QUERINO",
-    "id_setor": 56
-  },
-  {
-    "id": 403,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "AMANDA LIMA",
-    "id_setor": 56
-  },
-  {
-    "id": 404,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "DANIELY SILVA",
-    "id_setor": 56
-  },
-  {
-    "id": 405,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "GABRIEL RIBEIRO",
-    "id_setor": 56
-  },
-  {
-    "id": 406,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "MENIKEN SANTOS",
-    "id_setor": 56
-  },
-  {
-    "id": 407,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "MILLENE VICTORIA",
-    "id_setor": 56
-  },
-  {
-    "id": 408,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "PALOMA SANTOS",
-    "id_setor": 56
-  },
-  {
-    "id": 409,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "PRISCILA BARBARA",
-    "id_setor": 56
-  },
-  {
-    "id": 410,
-    "setores": "IMPOSTOS 22-D",
-    "usuarios": "VITOR AQUINO",
-    "id_setor": 56
-  },
-  {
-    "id": 411,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "ANDRESSA MATOS",
-    "id_setor": 57
-  },
-  {
-    "id": 412,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "CAIQUE ROBERTO",
-    "id_setor": 57
-  },
-  {
-    "id": 413,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "FRANCIELE NUNES",
-    "id_setor": 57
-  },
-  {
-    "id": 414,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "KARINE ALENCAR",
-    "id_setor": 57
-  },
-  {
-    "id": 415,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "LAURA FILGUEIRA",
-    "id_setor": 57
-  },
-  {
-    "id": 416,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "MIDIA AUGUSTO",
-    "id_setor": 57
-  },
-  {
-    "id": 417,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "NICOLE FERREIRA",
-    "id_setor": 57
-  },
-  {
-    "id": 418,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "RAFAELA CRUZ",
-    "id_setor": 57
-  },
-  {
-    "id": 419,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "SARAH FEITOSA",
-    "id_setor": 57
-  },
-  {
-    "id": 420,
-    "setores": "IMPOSTOS 22-F",
-    "usuarios": "WANESSA VIEIRA",
-    "id_setor": 57
-  },
-  {
-    "id": 421,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "DANUZA SOUZA",
-    "id_setor": 58
-  },
-  {
-    "id": 422,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "ERIK FERNANDES",
-    "id_setor": 58
-  },
-  {
-    "id": 423,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "GUILHERME OLIVIO",
-    "id_setor": 58
-  },
-  {
-    "id": 424,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "JAQUELINE VIANA",
-    "id_setor": 58
-  },
-  {
-    "id": 425,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "MARIANA SILVA",
-    "id_setor": 58
-  },
-  {
-    "id": 426,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "NATHALIA MACHADO",
-    "id_setor": 58
-  },
-  {
-    "id": 427,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "SARITA RAFAEL",
-    "id_setor": 58
-  },
-  {
-    "id": 428,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "SIMONE CONTENTE",
-    "id_setor": 58
-  },
-  {
-    "id": 429,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "UILYTTA ROCHA",
-    "id_setor": 58
-  },
-  {
-    "id": 430,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "VIVIAN CASARINI",
-    "id_setor": 58
-  },
-  {
-    "id": 431,
-    "setores": "IMPOSTOS 22-G",
-    "usuarios": "WESLEY PEDROSO",
-    "id_setor": 58
-  },
-  {
-    "id": 432,
-    "setores": "IMPOSTOS 4-E",
-    "usuarios": "BEATRIZ SAMPAIO",
-    "id_setor": 59
+    "nome": "IMPOSTOS 4-E",
+    "andar": "",
+    "localizacao": ""
   }
 ]
