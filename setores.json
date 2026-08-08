@@ -2,413 +2,354 @@
   {
     "id": 1,
     "nome": "INFORMATICA TI",
-    "gerente": "Ronaldo Pereira",
     "andar": "10",
     "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 2,
     "nome": "DPC PRIVATE",
-    "gerente": "Rosana Villardi",
     "andar": "10",
     "localizacao": "Direita / Ao lado da sala de Reunião Diamante"
   },
   {
     "id": 3,
     "nome": "CONTABILIDADE 1-A",
-    "gerente": "Izadora Honorato",
     "andar": "Novo 5",
     "localizacao": "Esquerda / Esquerda da sala de reunião"
   },
   {
     "id": 4,
     "nome": "CONTABILIDADE 1-B",
-    "gerente": "Luciana Arrigoni",
     "andar": "Novo 5",
     "localizacao": "Frente / Esquerda"
   },
   {
     "id": 5,
     "nome": "CONTABILIDADE 2-A",
-    "gerente": "Renata Goldoni",
     "andar": "Velho 5",
     "localizacao": "Direita / Direita da escada / 1º baia"
   },
   {
     "id": 6,
     "nome": "CONTABILIDADE 2-B",
-    "gerente": "Ricardo Pereira",
     "andar": "Velho 5",
     "localizacao": "Meio /"
   },
   {
     "id": 7,
     "nome": "CONTABILIDADE 2-C",
-    "gerente": "Felipe Lyra",
     "andar": "Velho 5",
     "localizacao": "Final do corredor à esquerda"
   },
   {
     "id": 8,
     "nome": "CONTABILIDADE 2-E",
-    "gerente": "Karine Lammel",
     "andar": "Novo 5",
     "localizacao": "Esquerda / Esquerda da sala de reunião"
   },
   {
     "id": 9,
     "nome": "CONTABILIDADE 3-B",
-    "gerente": "Marluci Azevedo",
     "andar": "Novo 5",
     "localizacao": "Sala de vidro entre Rejane e Verônica Costa"
   },
   {
     "id": 10,
     "nome": "CONTABILIDADE 3-C",
-    "gerente": "Rejane Xavier",
     "andar": "Novo 5",
     "localizacao": "Frente"
   },
   {
     "id": 11,
     "nome": "CONTABILIDADE 3-D",
-    "gerente": "Veronica Costa",
     "andar": "Novo 5",
     "localizacao": "Direita / Sala à direita / Início"
   },
   {
     "id": 12,
     "nome": "CONTABILIDADE 3-E",
-    "gerente": "Cristina Gouvea",
     "andar": "Novo 5",
     "localizacao": "Direita / Sala à direita / Meio"
   },
   {
     "id": 13,
     "nome": "CONTABILIDADE 8-A",
-    "gerente": "Alessandro Barreto",
     "andar": "4",
     "localizacao": "Direita / 3º baia / Janela"
   },
   {
     "id": 14,
     "nome": "CONTABILIDADE 8-B",
-    "gerente": "Ana Miceli",
     "andar": "4",
     "localizacao": "Esquerda / Final do corredor / Esquerda"
   },
   {
     "id": 15,
     "nome": "CONTABILIDADE 8-C",
-    "gerente": "Raquel Loredana",
     "andar": "4",
     "localizacao": "Direita / 3 ºbaia a esquerda"
   },
   {
     "id": 16,
     "nome": "DEPARTAMENTO PESSOAL 5-B",
-    "gerente": "Luciana Lupinucci",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 17,
     "nome": "DEPARTAMENTO PESSOAL 5-C",
-    "gerente": "Luciana Lupinucci",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 18,
     "nome": "DEPARTAMENTO PESSOAL 5-D",
-    "gerente": "Pamela Medeiros",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 19,
     "nome": "DEPARTAMENTO PESSOAL 5-E",
-    "gerente": "Pamela Medeiros",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 20,
     "nome": "DEPARTAMENTO PESSOAL 5-F",
-    "gerente": "Luciana Lupinucci",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 21,
     "nome": "DEPARTAMENTO PESSOAL 5-H",
-    "gerente": "Luciana Lupinucci",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 22,
     "nome": "DEPARTAMENTO PESSOAL 5-J",
-    "gerente": "Pamela Medeiros",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 23,
     "nome": "DEPARTAMENTO PESSOAL INTERNO",
-    "gerente": "Marilia Cavalcante",
     "andar": "10",
     "localizacao": "Direita"
   },
   {
     "id": 24,
     "nome": "DIRETORIA",
-    "gerente": "Manuel Pinho",
     "andar": "10",
     "localizacao": ""
   },
   {
     "id": 25,
     "nome": "FINANCEIRO DPC",
-    "gerente": "Joice Albertini",
     "andar": "10",
     "localizacao": "Esquerda / Frente ao balcão ADM"
   },
   {
     "id": 26,
     "nome": "GESTÃO FINANCEIRA 4-D",
-    "gerente": "Adriana Costa / Cassia Calixto",
     "andar": "10",
     "localizacao": "Direita / Final do corredor à Esquerda"
   },
   {
     "id": 27,
     "nome": "GESTÃO FINANCEIRA 9-A",
-    "gerente": "Jefferson Gonçalves",
     "andar": "4",
     "localizacao": "Esquerda / Final do corredor / Direita"
   },
   {
     "id": 28,
     "nome": "GESTÃO FINANCEIRA 9-B",
-    "gerente": "Luiz Caldas",
     "andar": "4",
     "localizacao": "Esquerda / Final do corredor / Direita"
   },
   {
     "id": 29,
     "nome": "IMPLANTAÇÃO ATHENAS",
-    "gerente": "William Pinho",
     "andar": "10",
     "localizacao": "Esquerda / Sala de Aquário de Vidro"
   },
   {
     "id": 30,
     "nome": "IMPOSTOS 1-A",
-    "gerente": "Amanda Barbosa",
     "andar": "Novo 5",
     "localizacao": "Esquerda / Direita da sala de reunião"
   },
   {
     "id": 31,
     "nome": "IMPOSTOS 2-A",
-    "gerente": "Patricia Guimarães",
     "andar": "Velho 5",
     "localizacao": "Frente a escada"
   },
   {
     "id": 32,
     "nome": "IMPOSTOS 2-B",
-    "gerente": "Luciana Valu",
     "andar": "Velho 5",
     "localizacao": "Direita / Final do corredor à Direita"
   },
   {
     "id": 33,
     "nome": "IMPOSTOS 2-C",
-    "gerente": "Natalia Martire",
     "andar": "Velho 5",
     "localizacao": "Direita / Em frente a sala da Glória"
   },
   {
     "id": 34,
     "nome": "IMPOSTOS 3-A",
-    "gerente": "Cristina Gouvea",
     "andar": "Novo 5",
     "localizacao": "Direita / Sala à direita / Meio"
   },
   {
     "id": 35,
     "nome": "IMPOSTOS 4-B",
-    "gerente": "Michele Mofacto",
     "andar": "10",
     "localizacao": "Direita / Final do corredor"
   },
   {
     "id": 36,
     "nome": "IMPOSTOS 4-D",
-    "gerente": "Cassia Calixto",
     "andar": "10",
     "localizacao": "Direita / Final do corredor à Esquerda"
   },
   {
     "id": 37,
     "nome": "IMPOSTOS 8-A",
-    "gerente": "Luciane Santana",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 38,
     "nome": "LABTECH",
-    "gerente": "Willian Mendes",
-    "andar": "10",
+    "andar": "4",
     "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 39,
     "nome": "NOVOS NEGÓCIOS",
-    "gerente": "Luciana Arakaki",
     "andar": "4",
     "localizacao": "Direita / Antes do CPD"
   },
   {
     "id": 40,
     "nome": "OBRIGAÇÕES ACESSÓRIAS",
-    "gerente": "Cristiano Gonçalves",
     "andar": "4",
     "localizacao": "Direita / Final do corredor"
   },
   {
     "id": 41,
     "nome": "PARALEGAL",
-    "gerente": "Michele Mofacto",
     "andar": "10",
     "localizacao": "Direita / Final do corredor"
   },
   {
     "id": 42,
     "nome": "RECEPÇÃO",
-    "gerente": "Joice Albertini",
     "andar": "4 ou 10",
     "localizacao": "Entrada"
   },
   {
     "id": 43,
     "nome": "RECURSOS HUMANOS",
-    "gerente": "Marcelo Leite",
     "andar": "4",
     "localizacao": "Esquerda / Frente ao bebedouro"
   },
   {
     "id": 44,
     "nome": "SISTEMA CONTÁBIL / FISCAL",
-    "gerente": "Ronaldo Pereira",
     "andar": "10",
     "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 45,
     "nome": "SISTEMA DP / RH",
-    "gerente": "Eduardo Gabina",
     "andar": "10",
     "localizacao": "Esquerda / Ao fundo do corredor"
   },
   {
     "id": 46,
     "nome": "COMUNICAÇÃO E MARKETING / GESTÃO INF",
-    "gerente": "Luciana Arakaki",
     "andar": "4",
     "localizacao": "Esquerda / Ao lado do CPD"
   },
   {
     "id": 47,
     "nome": "ADMINISTRAÇÃO",
-    "gerente": "Joice Albertini",
     "andar": "10",
     "localizacao": "Esquerda / Balcão / Ao lado do bebedouro"
   },
   {
     "id": 48,
     "nome": "CONTABILIDADE 1-C",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 49,
     "nome": "CONTABILIDADE 22-A",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 50,
     "nome": "CONTABILIDADE 22-B",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 51,
     "nome": "CONTABILIDADE 22-C",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 52,
     "nome": "CONTABILIDADE 22-D",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 53,
     "nome": "CONTABILIDADE 22-E",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 54,
     "nome": "IMPOSTOS 22-A",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 55,
     "nome": "IMPOSTOS 22-C",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 56,
     "nome": "IMPOSTOS 22-D",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 57,
     "nome": "IMPOSTOS 22-F",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 58,
     "nome": "IMPOSTOS 22-G",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   },
   {
     "id": 59,
     "nome": "IMPOSTOS 4-E",
-    "gerente": "",
     "andar": "",
     "localizacao": ""
   }
